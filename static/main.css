@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    margin: 20px auto;
+    width: 90%;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+form {
+    display: inline-block;
+    width: 24.7%;
+    height: 250px;
+    background-color: blue;
+    /*background-image: url(/static/ninja.gif);*/
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.5em;
+}
+
+article {
+    /*background-image: url(/static/ninja.gif);*/
+    height: 150px;
+    overflow-y: auto;
+    outline: 2px solid black;
+}
+
+.gold {
+    display: inline-block;
+    font-size: 1.25em;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: black;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}

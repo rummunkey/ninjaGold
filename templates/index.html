@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ninja Gold</title>
+        <link rel="stylesheet" href={{ url_for('static', filename='main.css')}}>
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <header>
+                <p class="gold">Your Gold:</p>
+                <p class="gold">{{ yourGold }}</p>
+            </header>
+
+            <form class="" action="/process_money" method="post">
+                    <h6>Farm</h6>
+                    <p>(earns 10-20 golds)</p>
+                    <input type="hidden" name="where" value="farm">
+                    <input type="submit" name="" value="Find Gold!">
+            </form>
+            <form class="" action="/process_money" method="post">
+                    <h6>Cave</h6>
+                    <p>(earns 5-10 golds)</p>
+                    <input type="hidden" name="where" value="cave">
+                    <input type="submit" name="" value="Find Gold!">
+            </form>
+            <form class="" action="/process_money" method="post">
+                    <h6>House</h6>
+                    <p>(earns 2-5 golds)</p>
+                    <input type="hidden" name="where" value="house">
+                    <input type="submit" name="" value="Find Gold!">
+            </form>
+            <form class="" action="/process_money" method="post">
+                    <h6>Casino</h6>
+                    <p>earns/takes 0-50 golds</p>
+                    <input type="hidden" name="where" value="casino">
+                    <input type="submit" name="" value="Find Gold!">
+            </form>
+            <p>Activities:</p>
+            <article class="">
+
+                {% set row_class = ['red', 'green'] %}
+                {% for i in msg[::-1] %}
+                    {% if color == 'red' %}
+                        <p class="{{ row_class[0] }}">{{ i }}</p>
+                    {% elif color == 'green' %}
+                        <p class="{{ row_class[1] }}">{{ i }}</p>
+                    {% endif %}
+                {% endfor %}
+
+            </article>
+        </div>
+    </body>
+</html>
