@@ -26,7 +26,7 @@ def home():
 def money():
 
     if request.form['where'] == 'farm':
-        session['modifier'] = random.randint(9, 20)
+        session['modifier'] = random.randint(10, 20)
         session['current'] += session['modifier']
 
     elif request.form['where'] == 'cave':
@@ -34,7 +34,7 @@ def money():
         session['current'] += session['modifier']
 
     elif request.form['where'] == 'house':
-        session['modifier'] = random.randint(1, 5)
+        session['modifier'] = random.randint(2, 5)
         session['current'] += session['modifier']
 
     elif request.form['where'] == 'casino':
@@ -45,10 +45,10 @@ def money():
 
     if session['modifier'] < 0:
         session['color'] = 'red'
-        session['msg'].append('Entered a casino and lost ' + str(abs(session['modifier'])) + ' golds... Ouch ' + ' (' + str(session['timestamp']) + ')')
+        session['msg'].append('<p class="red">Entered a casino and lost ' + str(abs(session['modifier'])) + ' golds... Ouch ' + ' (' + str(session['timestamp']) + ')</p>')
     else:
         session['color'] = 'green'
-        session['msg'].append('Earned ' + str(session['modifier']) + ' from the ' + request.form['where'] + ' (' + str(session['timestamp']) + ')')
+        session['msg'].append('<p class="green">Earned ' + str(session['modifier']) + ' from the ' + request.form['where'] + ' (' + str(session['timestamp']) + ')</p>')
     return redirect('/')
 
 

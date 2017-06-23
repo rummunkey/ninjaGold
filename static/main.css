@@ -23,6 +23,34 @@ form {
     font-size: 1.5em;
 }
 
+.farm {
+    background-image: url(/static/farm.gif);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cave {
+    background-image: url(/static/cave.gif);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.house {
+    background-image: url(/static/house.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.casino {
+    background-image: url(/static/casino.gif);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 article {
     /*background-image: url(/static/ninja.gif);*/
     height: 150px;
@@ -46,6 +74,8 @@ article {
   border-radius: 2px;
   background-color: black;
 }
+
+
 
 .red {
     color: red;
