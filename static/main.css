@@ -63,6 +63,17 @@ article {
     font-size: 1.25em;
 }
 
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+/*The below is only for Mac
+since they've decided they hate scrollbars*/
+
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 10px;
@@ -73,14 +84,4 @@ article {
 ::-webkit-scrollbar-thumb {
   border-radius: 2px;
   background-color: black;
-}
-
-
-
-.red {
-    color: red;
-}
-
-.green {
-    color: green;
 }
